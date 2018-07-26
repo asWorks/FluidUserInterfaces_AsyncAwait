@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="268*"/>
+            <RowDefinition Height="64*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Content="Button" Command="{Binding LoadCommand}"/>
+            <Button Content="Button" Width="75" Click="Button_Click"/>
+        </StackPanel>
+        <StackPanel>
+            <DatePicker/>
+            <CheckBox Content="CheckBox" IsChecked="{Binding BoxIsChecked}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding OutPut}"/>
+        </StackPanel>
+
     </Grid>
 </Window>

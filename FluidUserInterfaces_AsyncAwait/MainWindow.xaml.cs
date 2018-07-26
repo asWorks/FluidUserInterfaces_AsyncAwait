@@ -23,6 +23,14 @@ namespace FluidUserInterfaces_AsyncAwait
         public MainWindow()
         {
             InitializeComponent();
+            var vm = new ViewModels.MainViewModel();
+            this.DataContext = vm;
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
