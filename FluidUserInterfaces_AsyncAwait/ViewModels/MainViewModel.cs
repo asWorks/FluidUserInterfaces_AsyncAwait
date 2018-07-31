@@ -1,4 +1,5 @@
-﻿using FluidUserInterfaces_AsyncAwait.Commands;
+﻿using FluidUserInterfaces_AsyncAwait.BaseClasses;
+using FluidUserInterfaces_AsyncAwait.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +11,7 @@ using System.Windows.Input;
 
 namespace FluidUserInterfaces_AsyncAwait.ViewModels
 {
-    class MainViewModel:INotifyPropertyChanged
+    class MainViewModel:ViewModelBaseClass
     {
        
         
@@ -72,19 +73,7 @@ namespace FluidUserInterfaces_AsyncAwait.ViewModels
         public ObservableCollection<string> Speakers { get; set; }
         public ObservableCollection<string> Sessions { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged(string name)
-        {
-            var handler = PropertyChanged;
-            if (handler!=null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
-
-        }
-
-
+      
 
     }
 }
